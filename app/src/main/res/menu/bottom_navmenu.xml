@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="home"
+        android:icon="@drawable/home"
+        android:id="@+id/home"/>
+    <item android:title="draw"
+        android:icon="@drawable/drawing"
+        android:id="@+id/drawing"/>
+    <item android:title="pattern"
+        android:icon="@drawable/bed"
+        android:id="@+id/zenbed"/>
+    <item android:title="settings"
+        android:icon="@drawable/settings"
+        android:id="@+id/settings"
+        />
+</menu>
