@@ -25,6 +25,19 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
         String text = "<font color=#afa8a8>By signing in you are agreeing\nour</font> <font color=#76bee5>Term and privacy policy</font>";
         ((TextView)findViewById(R.id.terms)).setText(Html.fromHtml(text)); // Gives terms textview
         // a multicolored text
+
+        // sets status bar color to white and icons to gray
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            View decor = getWindow().getDecorView();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+            } else {
+                // We want to change tint color to white again.
+                // You can also record the flags in advance so that you can turn UI back completely if
+                // you have set other flags before, such as translucent or full screen.
+                decor.setSystemUiVisibility(0);
+            }
+        }
     }
 
     @Override

@@ -1,10 +1,14 @@
 package com.example.zenbednavdrawer.ui.home;
 
+import android.app.Activity;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,12 +22,12 @@ import com.example.zenbednavdrawer.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private HomeViewModel HomeViewModel;
     private FragmentHomeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
+        HomeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
@@ -34,10 +38,10 @@ public class HomeFragment extends Fragment {
 
 
         final TextView textView = binding.name;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        HomeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                //textView.setText(s);
+                textView.setText(s);
             }
         });
         return root;

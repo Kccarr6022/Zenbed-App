@@ -1,4 +1,4 @@
-package com.example.zenbednavdrawer.ui.patterns;
+package com.example.zenbednavdrawer.ui.settings;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,23 +12,23 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.zenbednavdrawer.databinding.FragmentPatternsBinding;
+import com.example.zenbednavdrawer.databinding.FragmentSettingsBinding;
 
-public class PatternsFragment extends Fragment {
+public class SettingsFragment extends Fragment {
 
-    private PatternsViewModel PatternsViewModel;
-    private FragmentPatternsBinding binding;
+    private SettingsViewModel SettingsViewModel;
+    private FragmentSettingsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        PatternsViewModel =
-                new ViewModelProvider(this).get(com.example.zenbednavdrawer.ui.patterns.PatternsViewModel.class);
+        SettingsViewModel =
+                new ViewModelProvider(this).get(SettingsViewModel.class);
 
-        binding = FragmentPatternsBinding.inflate(inflater, container, false);
+        binding = FragmentSettingsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textSlideshow;
-        PatternsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        SettingsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

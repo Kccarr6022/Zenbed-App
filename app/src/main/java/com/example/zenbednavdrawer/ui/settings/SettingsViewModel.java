@@ -1,16 +1,16 @@
-package com.example.zenbednavdrawer.ui.home;
+package com.example.zenbednavdrawer.ui.settings;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class SettingsViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public SettingsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Hello Nathan!");
+        mText.setValue("This is the settings page");
     }
 
     public LiveData<String> getText() {

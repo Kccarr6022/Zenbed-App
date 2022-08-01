@@ -12,4 +12,6 @@
     <color name="white">#ffffff</color>
     <color name="item">#dddddd</color>
     <color name="topnavitem">#0D0E34</color>
+    <color name="lwrtext">#8e95a5</color>
+    <color name="subtit">#2d3b59</color>
 </resources>
