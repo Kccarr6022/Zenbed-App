@@ -1,7 +1,6 @@
 package com.example.zenbednavdrawer.ui.draw;
 
-import android.app.Activity;
-import android.os.Build;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +13,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.zenbednavdrawer.MainActivity;
 import com.example.zenbednavdrawer.R;
 import com.example.zenbednavdrawer.databinding.FragmentDrawingBinding;
 
@@ -27,7 +25,7 @@ public class DrawingFragment extends Fragment{
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         DrawingViewModel =
-                new ViewModelProvider(this).get(DrawingViewModel.class);
+                new ViewModelProvider(this).get(com.example.zenbednavdrawer.ui.draw.DrawingViewModel.class);
 
         binding = FragmentDrawingBinding.inflate(inflater, container, false);
         View root = binding.getRoot();

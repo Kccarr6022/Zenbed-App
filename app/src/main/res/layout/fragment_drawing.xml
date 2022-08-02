@@ -33,39 +33,19 @@
         app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
 
 
-    <ImageView
-        android:id="@+id/gridLayout"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
-        android:src="@drawable/grid"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name">
-    </ImageView>
-
-            <ScrollView
+            <ImageView
+                android:id="@+id/gridLayout"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/grid"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2"
-
-
-                />
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="com.example.zenbednavdrawer.ui.patterns.PatternsFragment"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

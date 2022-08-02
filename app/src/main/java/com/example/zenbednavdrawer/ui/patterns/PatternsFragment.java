@@ -23,7 +23,7 @@ public class PatternsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         PatternsViewModel =
-                new ViewModelProvider(this).get(com.example.zenbednavdrawer.ui.patterns.PatternsViewModel.class);
+                new ViewModelProvider(this).get(PatternsViewModel.class);
 
         binding = FragmentPatternsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
