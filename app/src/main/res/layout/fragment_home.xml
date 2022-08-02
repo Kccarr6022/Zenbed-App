@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/layout"
+    android:background="#FFFFFF"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
     <ScrollView
@@ -16,20 +17,6 @@
             android:orientation="vertical"
             android:layout_height="match_parent">
 
-            <TextView
-            android:id="@+id/name"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginStart="33dp"
-            android:layout_marginLeft="33dp"
-            android:layout_marginTop="12dp"
-            android:fontFamily="@font/poppins"
-            android:text="Hello Nathan!"
-            android:textColor="@color/black"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/name2"
@@ -37,14 +24,13 @@
                 android:layout_height="49dp"
                 android:layout_marginStart="35dp"
                 android:layout_marginLeft="35dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="4dp"
                 android:fontFamily="@font/poppins"
                 android:text="Your Zenbed\nawaits..."
                 android:textColor="@color/lwrtext"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/name" />
-
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
                 android:id="@+id/btnpatterns"
@@ -93,12 +79,14 @@
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="250dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="30dp"
                 android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnpatterns">
@@ -116,13 +104,30 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                android:text="Edit Pattern Frames"
                 android:fontFamily="@font/poppins"
+                android:text="Cast Pattern to Bed"
                 android:textColor="@color/subtit"
                 android:textSize="21sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:fillViewport="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                app:layout_constraintVertical_bias="1.0">
+
+            </androidx.fragment.app.FragmentContainerView>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

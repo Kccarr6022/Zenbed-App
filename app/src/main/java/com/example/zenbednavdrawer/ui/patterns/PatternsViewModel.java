@@ -10,7 +10,7 @@ public class PatternsViewModel extends ViewModel {
 
     public PatternsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("Zenbed Settings");
     }
 
     public LiveData<String> getText() {

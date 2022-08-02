@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.zenbednavdrawer.R;
 import com.example.zenbednavdrawer.databinding.FragmentPatternsBinding;
 
 public class PatternsFragment extends Fragment {
@@ -27,7 +28,7 @@ public class PatternsFragment extends Fragment {
         binding = FragmentPatternsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSlideshow;
+        final TextView textView = getActivity().findViewById(R.id.name);
         PatternsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {

@@ -80,7 +80,9 @@ public class MainActivity extends AppCompatActivity {
 
                     switch (item.getItemId()) {
                         case R.id.home:
+
                             selectedFragment = new HomeFragment();
+
 
                             break;
                         case R.id.drawing:
@@ -94,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
                             break;
 
                     }
+
 
                     getSupportFragmentManager().beginTransaction().replace(
                             R.id.nav_host_fragment_content_main, selectedFragment).commit();
@@ -114,4 +117,5 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 }

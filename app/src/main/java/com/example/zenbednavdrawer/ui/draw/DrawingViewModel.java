@@ -10,7 +10,7 @@ public class DrawingViewModel extends ViewModel {
 
     public DrawingViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("");
+        mText.setValue("Drawing Mode");
     }
 
     public LiveData<String> getText() {

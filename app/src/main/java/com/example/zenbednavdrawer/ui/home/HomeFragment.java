@@ -37,7 +37,7 @@ public class HomeFragment extends Fragment {
 
 
 
-        final TextView textView = binding.name;
+        final TextView textView = getActivity().findViewById(R.id.name);
         HomeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {

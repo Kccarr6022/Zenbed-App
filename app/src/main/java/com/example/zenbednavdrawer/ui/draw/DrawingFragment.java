@@ -13,10 +13,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+
+import com.example.zenbednavdrawer.MainActivity;
+import com.example.zenbednavdrawer.R;
 import com.example.zenbednavdrawer.databinding.FragmentDrawingBinding;
 
 
-public class DrawingFragment extends Fragment {
+public class DrawingFragment extends Fragment{
 
     private DrawingViewModel DrawingViewModel;
     private FragmentDrawingBinding binding;
@@ -29,7 +32,7 @@ public class DrawingFragment extends Fragment {
         binding = FragmentDrawingBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGallery;
+        final TextView textView = getActivity().findViewById(R.id.name);
         DrawingViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
