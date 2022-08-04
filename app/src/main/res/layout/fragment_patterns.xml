@@ -44,13 +44,31 @@
             android:layout_height="75dp"
             android:background="@drawable/settingscard">
 
+            <ImageView
+                android:id="@+id/card_icon_background"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="30dp"
+                android:layout_height="55dp"
+                android:src="@drawable/card_icon"
+                android:background="@null"/>
+
+            <ImageView
+                android:id="@+id/card_icon"
+                android:layout_marginLeft="-30dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="30dp"
+                android:layout_height="55dp"
+                android:src="@drawable/bed"
+                android:background="@null"/>
+
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="65dp"
                 android:layout_marginTop="18dp"
+                android:layout_marginLeft="10dp"
                 android:fontFamily="@font/poppins"
-                android:gravity="center"
+                android:gravity="left"
                 android:text=" Pattern rate of change = 15%"
                 android:textColor="@color/black"
                 android:textSize="13sp"
