@@ -9,19 +9,6 @@
     tools:context=".ui.patterns.PatternsFragment">
 
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/zenbed_template"
-        app:layout_constraintBottom_toBottomOf="@id/parent"
-        app:layout_constraintEnd_toEndOf="@id/parent"
-        app:layout_constraintStart_toStartOf="@id/parent"
-        app:layout_constraintTop_toTopOf="@id/parent"
-        tools:ignore="NotSibling" />
-
-
     <androidx.cardview.widget.CardView
         android:id="@+id/rate_of_change_card"
         android:layout_width="match_parent"
@@ -41,11 +28,10 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="75dp"
             android:background="@drawable/settingscard">
 
             <ImageView
-                android:id="@+id/card_icon_background"
                 android:layout_marginLeft="22dp"
                 android:layout_marginTop="10dp"
                 android:layout_width="45dp"
@@ -62,6 +48,231 @@
                 android:fontFamily="@font/poppins"
                 android:gravity="left"
                 android:text=" Pattern rate of change = 15%"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"></TextView>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pattern_time_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rate_of_change_card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@drawable/settingscard">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:src="@drawable/cardicon" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="left"
+                android:text=" Pattern time per frame = 0.1"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"></TextView>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pattern_power_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pattern_time_card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@drawable/settingscard">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:src="@drawable/cardicon" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="left"
+                android:text=" Pattern power = 100%"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"></TextView>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pattern_start_power_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pattern_power_card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@drawable/settingscard">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:src="@drawable/cardicon" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="left"
+                android:text=" Pattern start power = 20%"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"></TextView>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pattern_max_power_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pattern_start_power_card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@drawable/settingscard">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:src="@drawable/cardicon" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="left"
+                android:text=" Pattern max power = 20%"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"></TextView>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pattern_hold_time_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pattern_max_power_card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@drawable/settingscard">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:src="@drawable/cardicon" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="left"
+                android:text=" Pattern hold time = 5 seconds"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"></TextView>
