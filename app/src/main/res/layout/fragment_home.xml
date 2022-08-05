@@ -42,10 +42,13 @@
                 android:layout_marginTop="5dp"
                 android:background="@drawable/btnpattern"
                 android:fontFamily="@font/poppins"
+                android:onClick="onClick"
                 android:text="Play pattern"
                 android:textAllCaps="false"
                 android:textColor="#242736"
                 android:textSize="10sp"
+                android:elevation="1dp"
+                android:stateListAnimator="@null"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/description" />
 
@@ -58,6 +61,7 @@
                 android:layout_marginTop="5dp"
                 android:background="@drawable/btnpattern"
                 android:fontFamily="@font/poppins"
+                android:onClick="onClick"
                 android:scaleType="fitXY"
                 android:text="Edit Pattern"
                 android:textAllCaps="false"
@@ -75,6 +79,7 @@
                 android:layout_marginTop="5dp"
                 android:background="@drawable/btnpattern"
                 android:fontFamily="@font/poppins"
+                android:onClick="onClick"
                 android:scaleType="fitXY"
                 android:src="@drawable/btnpattern"
                 android:text="Create Pattern"
@@ -121,13 +126,69 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/txtPattern"
+                                android:id="@+id/Rectangle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="30dp"
                                 android:layout_marginTop="100dp"
                                 android:fontFamily="@font/poppins"
                                 android:text="Rectangle Pattern"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"></TextView>
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="250dp"
+                        android:layout_height="225dp"
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="-20dp"
+                            android:background="@drawable/horizontal_card"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/Circle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="100dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Circle Pattern"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"></TextView>
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="250dp"
+                        android:layout_height="225dp"
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="-20dp"
+                            android:background="@drawable/horizontal_card"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/Beathing"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="100dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Breathing"
                                 android:textColor="@color/white"
                                 android:textSize="20sp"></TextView>
 
@@ -148,29 +209,31 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/poppins"
-                android:text="Cast Pattern to Bed"
+                android:text="Play Pattern"
                 android:textColor="@color/subtit"
                 android:textSize="21sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
-            <androidx.fragment.app.FragmentContainerView
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginEnd="30dp"
                 android:layout_marginRight="30dp"
-                android:fillViewport="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3"
-                app:layout_constraintVertical_bias="1.0">
+                app:layout_constraintTop_toBottomOf="@+id/textView3">
 
-            </androidx.fragment.app.FragmentContainerView>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragment_container_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:name="com.example.zenbednavdrawer.ui.sub_fragments.PatternCaster"/>
+            </ScrollView>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
