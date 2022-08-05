@@ -32,23 +32,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
             <Button
                 android:id="@+id/play_pattern"
                 android:layout_width="100dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/btnpattern"
                 android:fontFamily="@font/poppins"
                 android:text="Play pattern"
                 android:textAllCaps="false"
-                android:textSize="10sp"
                 android:textColor="#242736"
+                android:textSize="10sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/description" />
-
-
 
             <Button
                 android:id="@+id/imageButton2"
@@ -56,14 +55,14 @@
                 android:layout_height="45dp"
                 android:layout_marginStart="12dp"
                 android:layout_marginLeft="12dp"
-                android:layout_marginTop="10dp"
-                android:scaleType="fitXY"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/btnpattern"
                 android:fontFamily="@font/poppins"
+                android:scaleType="fitXY"
                 android:text="Edit Pattern"
                 android:textAllCaps="false"
-                android:textSize="10sp"
                 android:textColor="#242736"
+                android:textSize="10sp"
                 app:layout_constraintStart_toEndOf="@+id/play_pattern"
                 app:layout_constraintTop_toBottomOf="@+id/description" />
 
@@ -73,40 +72,72 @@
                 android:layout_height="45dp"
                 android:layout_marginStart="12dp"
                 android:layout_marginLeft="12dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/btnpattern"
                 android:fontFamily="@font/poppins"
-                android:text="Create Pattern"
-                android:textAllCaps="false"
-                android:textSize="10sp"
-                android:textColor="#242736"
                 android:scaleType="fitXY"
                 android:src="@drawable/btnpattern"
+                android:text="Create Pattern"
+                android:textAllCaps="false"
+                android:textColor="#242736"
+                android:textSize="10sp"
                 app:layout_constraintStart_toEndOf="@+id/imageButton2"
                 app:layout_constraintTop_toBottomOf="@+id/description" />
-
-
 
 
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="20dp"
                 app:layout_constraintBottom_toTopOf="@+id/textView3"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/play_pattern">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="vertical" />
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="250dp"
+                        android:layout_height="225dp"
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="-20dp"
+                            android:background="@drawable/horizontal_card"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtPattern"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="100dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Rectangle Pattern"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"></TextView>
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
             </HorizontalScrollView>
 
             <TextView
