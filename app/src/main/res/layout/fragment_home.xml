@@ -43,17 +43,17 @@
                 android:background="@drawable/btnpattern"
                 android:fontFamily="@font/poppins"
                 android:onClick="onClick"
+                android:elevation="0dp"
                 android:text="Play pattern"
                 android:textAllCaps="false"
                 android:textColor="#242736"
                 android:textSize="10sp"
-                android:elevation="1dp"
                 android:stateListAnimator="@null"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/description" />
 
             <Button
-                android:id="@+id/imageButton2"
+                android:id="@+id/edit_pattern"
                 android:layout_width="100dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="12dp"
@@ -67,11 +67,12 @@
                 android:textAllCaps="false"
                 android:textColor="#242736"
                 android:textSize="10sp"
+                android:stateListAnimator="@null"
                 app:layout_constraintStart_toEndOf="@+id/play_pattern"
                 app:layout_constraintTop_toBottomOf="@+id/description" />
 
             <Button
-                android:id="@+id/imageButton3"
+                android:id="@+id/create_pattern"
                 android:layout_width="100dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="12dp"
@@ -81,12 +82,13 @@
                 android:fontFamily="@font/poppins"
                 android:onClick="onClick"
                 android:scaleType="fitXY"
-                android:src="@drawable/btnpattern"
                 android:text="Create Pattern"
                 android:textAllCaps="false"
+                android:elevation="0dp"
                 android:textColor="#242736"
                 android:textSize="10sp"
-                app:layout_constraintStart_toEndOf="@+id/imageButton2"
+                android:stateListAnimator="@null"
+                app:layout_constraintStart_toEndOf="@+id/edit_pattern"
                 app:layout_constraintTop_toBottomOf="@+id/description" />
 
 

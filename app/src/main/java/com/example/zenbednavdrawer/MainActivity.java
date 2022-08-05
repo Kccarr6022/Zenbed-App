@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import com.example.zenbednavdrawer.ui.draw.DrawingFragment;
 import com.example.zenbednavdrawer.ui.home.HomeFragment;
@@ -14,6 +15,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -26,7 +28,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.zenbednavdrawer.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
@@ -103,6 +105,30 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
             };
+
+    @Override
+    public void onClick(View v) {
+        if (findViewById(R.id.play_pattern).equals(v)) {
+            ((Button) v).setBackgroundColor(getResources().getColor(R.color.white));
+            ((Button) findViewById(R.id.edit_pattern)).setBackground(ContextCompat.getDrawable(this, R.drawable.btnpattern));
+            ((Button) findViewById(R.id.create_pattern)).setBackground(ContextCompat.getDrawable(this, R.drawable.btnpattern));
+
+        }
+
+        if (findViewById(R.id.edit_pattern).equals(v)) {
+            ((Button) v).setBackgroundColor(getResources().getColor(R.color.white));
+            ((Button) findViewById(R.id.play_pattern)).setBackground(ContextCompat.getDrawable(this, R.drawable.btnpattern));
+            ((Button) findViewById(R.id.create_pattern)).setBackground(ContextCompat.getDrawable(this, R.drawable.btnpattern));
+        }
+
+        if (findViewById(R.id.create_pattern).equals(v)) {
+            ((Button) v).setBackgroundColor(getResources().getColor(R.color.white));
+            ((Button) findViewById(R.id.edit_pattern)).setBackground(ContextCompat.getDrawable(this, R.drawable.btnpattern));
+            ((Button) findViewById(R.id.play_pattern)).setBackground(ContextCompat.getDrawable(this, R.drawable.btnpattern));
+        }
+
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

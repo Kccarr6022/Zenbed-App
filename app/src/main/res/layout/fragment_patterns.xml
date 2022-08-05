@@ -26,14 +26,14 @@
         android:id="@+id/rate_of_change_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="31dp"
         android:layout_marginRight="31dp"
         app:cardBackgroundColor="@android:color/transparent"
         app:cardCornerRadius="15dp"
-        app:cardElevation="2dp"
+        app:cardElevation="0dp"
         app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,37 +41,29 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="75dp"
+            android:layout_height="80dp"
             android:background="@drawable/settingscard">
 
             <ImageView
                 android:id="@+id/card_icon_background"
                 android:layout_marginLeft="22dp"
                 android:layout_marginTop="10dp"
-                android:layout_width="30dp"
-                android:layout_height="55dp"
-                android:src="@drawable/card_icon"
+                android:layout_width="45dp"
+                android:layout_height="65dp"
+                android:src="@drawable/cardicon"
                 android:background="@null"/>
 
-            <ImageView
-                android:id="@+id/card_icon"
-                android:layout_marginLeft="-30dp"
-                android:layout_marginTop="10dp"
-                android:layout_width="30dp"
-                android:layout_height="55dp"
-                android:src="@drawable/bed"
-                android:background="@null"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/poppins"
                 android:gravity="left"
                 android:text=" Pattern rate of change = 15%"
                 android:textColor="@color/black"
-                android:textSize="13sp"
+                android:textSize="15sp"
                 android:textStyle="bold"></TextView>
 
         </LinearLayout>
