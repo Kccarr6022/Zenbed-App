@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.zenbednavdrawer.ui.draw.DrawingFragment;
 import com.example.zenbednavdrawer.ui.home.HomeFragment;
@@ -36,14 +37,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         // Hides toolbar title
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(null);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = binding.navView;
@@ -72,6 +72,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 decor.setSystemUiVisibility(0);
             }
         }
+
+        ((TextView) findViewById(R.id.title_name)).setText("Hello Nathan!");
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
@@ -79,27 +81,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     Fragment selectedFragment = null;
+                    String title = "";
 
                     switch (item.getItemId()) {
                         case R.id.home:
-
+                            title = "Hello Nathan!";
                             selectedFragment = new HomeFragment();
-
-
                             break;
                         case R.id.drawing:
+                            title = "Drawing Mode";
                             selectedFragment = new DrawingFragment();
                             break;
                         case R.id.zenbed:
+                            title = "Zenbed Settings";
                             selectedFragment = new PatternsFragment();
                             break;
                         case R.id.settings:
+                            title = "Application Settings";
                             selectedFragment = new SettingsFragment();
                             break;
 
                     }
 
-
+                    ((TextView) findViewById(R.id.title_name)).setText(title);
                     getSupportFragmentManager().beginTransaction().replace(
                             R.id.nav_host_fragment_content_main, selectedFragment).commit();
                     return true;

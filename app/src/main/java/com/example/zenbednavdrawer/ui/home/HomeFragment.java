@@ -1,14 +1,9 @@
 package com.example.zenbednavdrawer.ui.home;
 
-import android.app.Activity;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -32,16 +27,17 @@ public class HomeFragment extends Fragment {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+        LayoutInflater lf = getActivity().getLayoutInflater();
+        //View view =  lf.inflate(R.layout.fragment_home, container, false); //pass the correct layout name for the fragment
 
 
 
 
-
-        final TextView textView = getActivity().findViewById(R.id.name);
+        final TextView textView = getActivity().findViewById(R.id.title_name);
         HomeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                textView.setText(s);
+                //textView.setText("test");
             }
         });
         return root;

@@ -30,7 +30,7 @@ public class DrawingFragment extends Fragment{
         binding = FragmentDrawingBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = getActivity().findViewById(R.id.name);
+        final TextView textView = getActivity().findViewById(R.id.title_name);
         DrawingViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
